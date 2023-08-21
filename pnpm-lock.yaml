@@ -1,32 +1,50 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@hookform/error-message': ^2.0.1
+  '@types/lodash.difference': ^4.5.7
+  '@types/lodash.intersection': ^4.4.7
   '@types/node': 20.5.0
   '@types/react': 18.2.20
   '@types/react-dom': 18.2.7
   autoprefixer: 10.4.15
   eslint: 8.47.0
   eslint-config-next: 13.4.13
+  eslint-plugin-simple-import-sort: ^10.0.0
+  lodash.difference: ^4.5.0
+  lodash.intersection: ^4.4.0
   next: 13.4.13
   postcss: 8.4.27
   react: 18.2.0
   react-dom: 18.2.0
+  react-hook-form: ^7.45.4
+  swr: ^2.2.1
   tailwindcss: 3.3.3
   typescript: 5.1.6
 
 dependencies:
+  '@hookform/error-message': 2.0.1_enf5yva5qxmtcndzbm3inh6asy
   '@types/node': 20.5.0
   '@types/react': 18.2.20
   '@types/react-dom': 18.2.7
   autoprefixer: 10.4.15_postcss@8.4.27
   eslint: 8.47.0
   eslint-config-next: 13.4.13_qj3u6ezxe2airdzjq3nyoxe24m
+  eslint-plugin-simple-import-sort: 10.0.0_eslint@8.47.0
   next: 13.4.13_biqbaboplfbrettd7655fr4n2y
   postcss: 8.4.27
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-hook-form: 7.45.4_react@18.2.0
+  swr: 2.2.1_react@18.2.0
   tailwindcss: 3.3.3
   typescript: 5.1.6
+
+devDependencies:
+  '@types/lodash.difference': 4.5.7
+  '@types/lodash.intersection': 4.4.7
+  lodash.difference: 4.5.0
+  lodash.intersection: 4.4.0
 
 packages:
 
@@ -82,6 +100,18 @@ packages:
   /@eslint/js/8.47.0:
     resolution: {integrity: sha512-P6omY1zv5MItm93kLM8s2vr1HICJH8v0dvddDhysbIuZ+vcjOHg5Zbkf1mTkcmi2JA9oBG2anOkRnW8WJTS8Og==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: false
+
+  /@hookform/error-message/2.0.1_enf5yva5qxmtcndzbm3inh6asy:
+    resolution: {integrity: sha512-U410sAr92xgxT1idlu9WWOVjndxLdgPUHEB8Schr27C9eh7/xUnITWpCMF93s+lGiG++D4JnbSnrb5A21AdSNg==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+      react-hook-form: ^7.0.0
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-hook-form: 7.45.4_react@18.2.0
     dev: false
 
   /@humanwhocodes/config-array/0.11.10:
@@ -259,6 +289,22 @@ packages:
   /@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: false
+
+  /@types/lodash.difference/4.5.7:
+    resolution: {integrity: sha512-L7r80ymosy9HiqndKY9XfWeneRwOqAramdAL184pQhlS5PB+J3sKnpgUCBh7r9E6Rsdf4D4bty7t7HEC5Jny1Q==}
+    dependencies:
+      '@types/lodash': 4.14.197
+    dev: true
+
+  /@types/lodash.intersection/4.4.7:
+    resolution: {integrity: sha512-7ukD2s54bmRNNpiH9ApEErO4H6mB8+WmXFr/6RpP3e/n7h3UFhEJC7QwLcoWAqOrYCIRFMAAwDf3ambSsW8c5Q==}
+    dependencies:
+      '@types/lodash': 4.14.197
+    dev: true
+
+  /@types/lodash/4.14.197:
+    resolution: {integrity: sha512-BMVOiWs0uNxHVlHBgzTIqJYmj+PgCo4euloGF+5m4okL3rEYzM2EEv78mw8zWSMM57dM7kVIgJ2QDvwHSoCI5g==}
+    dev: true
 
   /@types/node/20.5.0:
     resolution: {integrity: sha512-Mgq7eCtoTjT89FqNoTzzXg2XvCi5VMhRV6+I2aYanc6kQCBImeNaAYRs/DyoVqk1YEUJK5gN9VO7HRIdz4Wo3Q==}
@@ -1000,6 +1046,14 @@ packages:
       string.prototype.matchall: 4.0.8
     dev: false
 
+  /eslint-plugin-simple-import-sort/10.0.0_eslint@8.47.0:
+    resolution: {integrity: sha512-AeTvO9UCMSNzIHRkg8S6c3RPy5YEwKWSQPx3DYghLedo2ZQxowPFLGDN1AZ2evfg6r6mjBSZSLxLFsWSu3acsw==}
+    peerDependencies:
+      eslint: '>=5.0.0'
+    dependencies:
+      eslint: 8.47.0
+    dev: false
+
   /eslint-scope/7.2.2:
     resolution: {integrity: sha512-dOt21O7lTMhDM+X9mB4GX+DZrZtCUJPL/wlcTqxyrx5IvO0IYtILdtrQGQp+8n5S0gwSVmOf9NQrjMOgfQZlIg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -1591,6 +1645,14 @@ packages:
       p-locate: 5.0.0
     dev: false
 
+  /lodash.difference/4.5.0:
+    resolution: {integrity: sha512-dS2j+W26TQ7taQBGN8Lbbq04ssV3emRw4NY58WErlTO29pIqS0HmoT5aJ9+TUQ1N3G+JOZSji4eugsWwGp9yPA==}
+    dev: true
+
+  /lodash.intersection/4.4.0:
+    resolution: {integrity: sha512-N+L0cCfnqMv6mxXtSPeKt+IavbOBBSiAEkKyLasZ8BVcP9YXQgxLO12oPR8OyURwKV8l5vJKiE1M8aS70heuMg==}
+    dev: true
+
   /lodash.merge/4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
     dev: false
@@ -1977,6 +2039,15 @@ packages:
       scheduler: 0.23.0
     dev: false
 
+  /react-hook-form/7.45.4_react@18.2.0:
+    resolution: {integrity: sha512-HGDV1JOOBPZj10LB3+OZgfDBTn+IeEsNOKiq/cxbQAIbKaiJUe/KV8DBUzsx0Gx/7IG/orWqRRm736JwOfUSWQ==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: false
@@ -2229,6 +2300,16 @@ packages:
     engines: {node: '>= 0.4'}
     dev: false
 
+  /swr/2.2.1_react@18.2.0:
+    resolution: {integrity: sha512-KJVA7dGtOBeZ+2sycEuzUfVIP5lZ/cd0xjevv85n2YG0x1uHJQicjAtahVZL6xG3+TjqhbBqimwYzVo3saeVXQ==}
+    peerDependencies:
+      react: ^16.11.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      client-only: 0.0.1
+      react: 18.2.0
+      use-sync-external-store: 1.2.0_react@18.2.0
+    dev: false
+
   /tailwindcss/3.3.3:
     resolution: {integrity: sha512-A0KgSkef7eE4Mf+nKJ83i75TMyq8HqY3qmFIJSWy8bNt0v1lG7jUcpGpoTFxAwYcWOphcTBLPPJg+bDfhDf52w==}
     engines: {node: '>=14.0.0'}
@@ -2395,6 +2476,14 @@ packages:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
       punycode: 2.3.0
+    dev: false
+
+  /use-sync-external-store/1.2.0_react@18.2.0:
+    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /util-deprecate/1.0.2:
