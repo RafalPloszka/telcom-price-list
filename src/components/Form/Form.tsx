@@ -11,6 +11,8 @@ import { useGetYears } from "../../hooks/useGetYears";
 import { Spinner } from "../Spinner";
 import { FormProps, FormValues } from "./Form.types";
 
+const PRODUCTPRICING_URL = "/api/productsPricing";
+
 export const Form = ({ setTotal, setTotalWithDiscount }: FormProps) => {
   const {
     register,
@@ -35,11 +37,16 @@ export const Form = ({ setTotal, setTotalWithDiscount }: FormProps) => {
 
       const paramsString = params.toString();
 
-      const response = await fetch(`/api/productsPricing?${paramsString}`);
-      const responseJson = await response.json();
+      try {
+        const response = await fetch(`${PRODUCTPRICING_URL}?${paramsString}`);
+        const responseJson = await response.json();
 
-      setTotal(responseJson.totalPrice);
-      setTotalWithDiscount(responseJson.bestOffer);
+        setTotal(responseJson.totalPrice);
+        setTotalWithDiscount(responseJson.bestOffer);
+      } catch (error) {
+        // TODO: add better error handling
+        console.log(error);
+      }
     },
     [setTotal, setTotalWithDiscount]
   );
@@ -132,5 +139,3 @@ export const Form = ({ setTotal, setTotalWithDiscount }: FormProps) => {
     </form>
   );
 };
-
-function getValidationRules() {}
