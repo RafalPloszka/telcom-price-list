@@ -3,27 +3,7 @@ import intersection from "lodash.intersection";
 import { NextResponse } from "next/server";
 
 import data from "../../data.json";
-
-type Id = string;
-
-type SingleProductPricing = {
-  id: Id;
-  name: string;
-  price: number;
-  discounts?: Discount[];
-};
-
-type Discount = {
-  id: Id;
-  name: string;
-  productIds: Id[];
-  value: number;
-};
-
-type ProductsPricing = Record<
-  string,
-  { products: SingleProductPricing[]; discounts?: Discount[] }
->;
+import { Discount, ProductsPricing, SingleProductPricing } from "../types";
 
 const productsPricing: ProductsPricing = data;
 

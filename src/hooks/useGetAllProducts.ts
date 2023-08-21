@@ -1,15 +1,6 @@
 import useSWR from "swr";
 
-export type ProductsData = {
-  data: {
-    id: string;
-    name: string;
-    validationRule?: {
-      requiredWith: string;
-      errorMessage: string;
-    };
-  }[];
-};
+import { ProductsData } from "@/app/api/types";
 
 const fetcher = async (url: string) => {
   const res = await fetch(url);
@@ -18,7 +9,7 @@ const fetcher = async (url: string) => {
     throw Error("Error occured when retrieving products data");
   }
 
-  const data: ProductsData = await res.json();
+  const data: { data: ProductsData } = await res.json();
 
   return data;
 };

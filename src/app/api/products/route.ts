@@ -1,8 +1,10 @@
 import { NextResponse } from "next/server";
 
+import { ProductsData } from "../types";
+
 export async function GET() {
   // mocked data
-  const data = [
+  const data: ProductsData = [
     {
       id: "1",
       name: "Internet",

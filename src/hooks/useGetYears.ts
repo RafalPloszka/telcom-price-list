@@ -1,5 +1,7 @@
 import useSWR from "swr";
 
+import { YearsData } from "@/app/api/types";
+
 const fetcher = async (url: string) => {
   const res = await fetch(url);
 
@@ -7,7 +9,7 @@ const fetcher = async (url: string) => {
     throw Error("Error occured when retrieving years data");
   }
 
-  const data: { data: string[] } = await res.json();
+  const data: { data: YearsData } = await res.json();
 
   return data;
 };
